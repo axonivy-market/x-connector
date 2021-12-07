@@ -24,7 +24,9 @@ public class TwitterTest {
 
   @BeforeEach
   void beforeEach(AppFixture fixture) {
-    fixture.environment("test");
+    //Disable OAuth feature for mock rest service
+    System.setProperty("ivy.Applications.test.RestClients.Twitter API (Twitter API v2).Features", "ch.ivyteam.ivy.rest.client.mapper.JsonFeature");
+    fixture.var("Twitter-connector.Url", "{ivy.app.baseurl}/api/twitterMock");
   }
 
   @Test
