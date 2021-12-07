@@ -1,5 +1,5 @@
 [Ivy]
-17D8046C692CA8F3 9.2.0 #module
+17D8046C692CA8F3 9.3.1 #module
 >Proto >Proto Collection #zClass
 Tr0 Twitter Big #zClass
 Tr0 B #cInfo
@@ -29,7 +29,7 @@ Tr0 f0 outParamInfo 'user.description=The user which was found by the request' #
 Tr0 f0 outParamTable 'result.user=in.user;
 ' #txt
 Tr0 f0 callSignature findUser(String) #txt
-Tr0 f0 tags CONNECTOR #txt
+Tr0 f0 @CG|tags CONNECTOR #txt
 Tr0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -105,7 +105,7 @@ Tr0 f6 outParamInfo 'tweets.description=The tweets which were found by the reque
 Tr0 f6 outParamTable 'result.tweets=in.tweets;
 ' #txt
 Tr0 f6 callSignature findTweets(String) #txt
-Tr0 f6 tags CONNECTOR #txt
+Tr0 f6 @CG|tags CONNECTOR #txt
 Tr0 f6 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>

@@ -24,7 +24,7 @@ public class TwitterTest {
 
   @BeforeEach
   void beforeEach(AppFixture fixture) {
-    fixture.environment("test");
+    fixture.var("Twitter-connector.Url", "{ivy.app.baseurl}/api/twitterMock");
   }
 
   @Test
