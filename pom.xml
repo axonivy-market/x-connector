@@ -3,7 +3,7 @@
   <groupId>com.axonivy.connector.twitter</groupId>
   <name>twitter-connector</name>
   <artifactId>twitter-connector-modules</artifactId>
-  <version>9.3.0-SNAPSHOT</version>
+  <version>9.3.0</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -15,7 +15,7 @@
 
   <scm>
     <developerConnection>scm:git:https://github.com/axonivy-market/${project.name}.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>v9.3.0</tag>
   </scm>
 
   <build>
