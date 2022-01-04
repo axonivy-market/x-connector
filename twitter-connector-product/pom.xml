@@ -36,8 +36,8 @@
             </goals>
             <configuration>
               <tasks>
-                <unzip dest="">
-                  <fileset dir="./..">
+                <unzip dest="${basedir}">
+                  <fileset dir="${basedir}/..">
                     <include name="**/lib/generated/rest/jaxRsClient_*.jar" />
                   </fileset>
                   <patternset>
