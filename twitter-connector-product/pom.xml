@@ -4,7 +4,6 @@
   <artifactId>twitter-connector-product</artifactId>
   <version>9.4.0-SNAPSHOT</version>
   <packaging>pom</packaging>
-
   <build>
     <plugins>
       <plugin>
@@ -22,6 +21,31 @@
               <descriptors>
                 <descriptor>zip.xml</descriptor>
               </descriptors>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <tasks>
+                <unzip dest="">
+                  <fileset dir="./..">
+                    <include name="**/lib/generated/rest/jaxRsClient_*.jar" />
+                  </fileset>
+                  <patternset>
+                    <include name="**/openapi.json" />
+                  </patternset>
+                  <mapper type="flatten" />
+                </unzip>
+              </tasks>
             </configuration>
           </execution>
         </executions>
