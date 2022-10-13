@@ -21,9 +21,6 @@
         <artifactId>project-build-plugin</artifactId>
         <version>10.0.0</version>
         <extensions>true</extensions>
-        <configuration>
-          <ivyVersion>10.0.0</ivyVersion>
-        </configuration>
       </plugin>
     </plugins>
   </build>
