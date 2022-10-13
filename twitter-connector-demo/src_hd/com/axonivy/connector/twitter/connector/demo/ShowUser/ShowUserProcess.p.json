@@ -1,8 +1,10 @@
 {
-  "format" : "9.4.20",
+  "format" : "10.0.0",
   "id" : "17D806AC43051BEB",
-  "data" : "com.axonivy.connector.twitter.connector.demo.ShowUser.ShowUserData",
   "kind" : "HTML_DIALOG",
+  "config" : {
+    "data" : "com.axonivy.connector.twitter.connector.demo.ShowUser.ShowUserData"
+  },
   "elements" : [ {
       "id" : "f0",
       "type" : "HtmlDialogStart",
