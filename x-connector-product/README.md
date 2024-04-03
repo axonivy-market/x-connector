@@ -1,4 +1,4 @@
-# Twitter Connector
+# X Connector
 Axon Ivy’s [X (formarly Twitter)](https://twitter.com/) connector illustrates the power of
 integrating existing systems to your process automation initiatives. Social
 communication is a must and using X (formarly Twitter) in any business process supports an
