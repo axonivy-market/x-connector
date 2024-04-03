@@ -1,4 +1,4 @@
-package com.axonivy.connector.twitter.test;
+package com.axonivy.connector.x.test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -18,7 +18,7 @@ import ch.ivyteam.ivy.bpm.exec.client.IvyProcessTest;
 import ch.ivyteam.ivy.environment.AppFixture;
 
 @IvyProcessTest
-public class TwitterTest {
+public class XTest {
 
   private static final BpmProcess testee = BpmProcess.path("Twitter");
 

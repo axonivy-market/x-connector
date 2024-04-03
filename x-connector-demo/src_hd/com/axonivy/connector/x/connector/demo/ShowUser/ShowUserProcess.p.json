@@ -55,7 +55,7 @@
       "type" : "SubProcessCall",
       "name" : "find User",
       "config" : {
-        "processCall" : "Twitter:findUser(String)",
+        "processCall" : "X:findUser(String)",
         "output" : {
           "map" : {
             "out" : "in",

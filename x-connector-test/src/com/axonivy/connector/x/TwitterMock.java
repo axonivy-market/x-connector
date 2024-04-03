@@ -1,4 +1,4 @@
-package com.axonivy.connector.twitter;
+package com.axonivy.connector.x;
 
 import javax.annotation.security.PermitAll;
 import javax.ws.rs.GET;

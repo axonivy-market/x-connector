@@ -55,7 +55,7 @@
       "type" : "SubProcessCall",
       "name" : "find Tweets",
       "config" : {
-        "processCall" : "Twitter:findTweets(String)",
+        "processCall" : "X:findTweets(String)",
         "output" : {
           "map" : {
             "out" : "in",

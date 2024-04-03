@@ -1,12 +1,12 @@
 Variables:
 
-  Twitter-connector:
+  X-connector:
     
-    # Url to twitter connector
+    # Url to x connector
     Url: "https://api.twitter.com"
 
-    # Key to connect to the Twitter Account
-    Key: 
+    # Key to connect to the X Account
+    Key: gb1w58iCDQuru5Eay06HRTtKw
 
     # SecretKey to connect to the Twitter Account
-    SecretKey: 
+    SecretKey: L5ZrxoPgGtGrP24XnetOGjE3By4koWxXEPHtk8qOojcOXzVQEK
