@@ -32,7 +32,7 @@
       "visual" : {
         "at" : { "x" : 96, "y" : 64 },
         "labelOffset" : { "x" : 8, "y" : 43 },
-        "icon" : "res:/webContent/icons/twitter.png?small"
+        "icon" : "res:/webContent/icons/x.png?small"
       },
       "connect" : { "id" : "f4", "to" : "f3" }
     }, {
@@ -66,7 +66,7 @@
       "visual" : {
         "at" : { "x" : 224, "y" : 64 },
         "size" : { "width" : 176, "height" : 60 },
-        "icon" : "res:/webContent/icons/twitter.png"
+        "icon" : "res:/webContent/icons/x.png"
       },
       "connect" : { "id" : "f2", "to" : "f1" }
     }, {
@@ -104,7 +104,7 @@
       "visual" : {
         "at" : { "x" : 224, "y" : 192 },
         "size" : { "width" : 176, "height" : 60 },
-        "icon" : "res:/webContent/icons/twitter.png"
+        "icon" : "res:/webContent/icons/x.png"
       },
       "connect" : { "id" : "f8", "to" : "f7" }
     }, {
@@ -134,7 +134,7 @@
       "visual" : {
         "at" : { "x" : 96, "y" : 192 },
         "labelOffset" : { "x" : 16, "y" : 43 },
-        "icon" : "res:/webContent/icons/twitter.png?small"
+        "icon" : "res:/webContent/icons/x.png?small"
       },
       "connect" : { "id" : "f9", "to" : "f5" }
     }, {
