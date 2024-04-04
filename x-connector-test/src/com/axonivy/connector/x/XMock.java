@@ -11,10 +11,10 @@ import javax.ws.rs.core.Response;
 
 import io.swagger.v3.oas.annotations.Hidden;
 
-@Path("twitterMock/2")
+@Path("xMock/2")
 @PermitAll
 @Hidden
-public class TwitterMock {
+public class XMock {
 
   @GET
   @Path("users/by/username/{username}")

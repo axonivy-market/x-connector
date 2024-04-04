@@ -26,7 +26,7 @@ public class XTest {
   void beforeEach(AppFixture fixture) {
     //Disable OAuth feature for mock rest service
     fixture.config("RestClients.X API (X API v2).Features", "ch.ivyteam.ivy.rest.client.mapper.JsonFeature");
-    fixture.var("X-connector.Url", "{ivy.app.baseurl}/api/twitterMock");
+    fixture.var("X-connector.Url", "{ivy.app.baseurl}/api/xMock");
   }
 
   @Test
