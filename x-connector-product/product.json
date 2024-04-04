@@ -5,8 +5,8 @@
       "data": {
         "projects": [
           {
-            "groupId": "com.axonivy.connector.twitter",
-            "artifactId": "twitter-connector-demo",
+            "groupId": "com.axonivy.connector.x",
+            "artifactId": "x-connector-demo",
             "version": "${version}",
             "type": "iar"
           }
@@ -27,8 +27,8 @@
       "data": {
         "dependencies": [
           {
-            "groupId": "com.axonivy.connector.twitter",
-            "artifactId": "twitter-connector",
+            "groupId": "com.axonivy.connector.x",
+            "artifactId": "x-connector",
             "version": "${version}",
             "type": "iar"
           }
