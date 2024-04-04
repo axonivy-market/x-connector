@@ -13,7 +13,7 @@
         "callSignature" : "findUser",
         "input" : {
           "params" : [
-            { "name" : "username", "type" : "String", "desc" : "The user which you want to find in Twitter" }
+            { "name" : "username", "type" : "String", "desc" : "The user which you want to find in X" }
           ],
           "map" : {
             "out.username" : "param.username"
@@ -44,7 +44,7 @@
     }, {
       "id" : "f3",
       "type" : "RestClientCall",
-      "name" : "Twitter API (Twitter API v2)",
+      "name" : "X API (X API v2)",
       "config" : {
         "path" : "/2/users/by/username/{username}",
         "clientId" : "0b74edb8-5459-4ccc-aac7-505531e06398",
@@ -72,7 +72,7 @@
     }, {
       "id" : "f5",
       "type" : "RestClientCall",
-      "name" : "Twitter API (Twitter API v2)",
+      "name" : "X API (X API v2)",
       "config" : {
         "path" : "/2/tweets/search/recent",
         "clientId" : "0b74edb8-5459-4ccc-aac7-505531e06398",
