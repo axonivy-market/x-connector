@@ -1,6 +1,0 @@
-ShowUserData #class
-com.axonivy.connector.twitter.connector.demo.ShowUser #namespace
-query String #field
-query PERSISTENT #fieldModifier
-user com.twitter.api.client.User #field
-user PERSISTENT #fieldModifier

@@ -1,0 +1,10 @@
+XData #class
+com.axonivy.connector.x #namespace
+username String #field
+username PERSISTENT #fieldModifier
+user com.twitter.api.client.User #field
+user PERSISTENT #fieldModifier
+query String #field
+query PERSISTENT #fieldModifier
+tweets java.util.List<com.twitter.api.client.Tweet> #field
+tweets PERSISTENT #fieldModifier
