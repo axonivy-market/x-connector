@@ -20,13 +20,13 @@ import ch.ivyteam.ivy.environment.AppFixture;
 @IvyProcessTest
 public class XTest {
 
-  private static final BpmProcess testee = BpmProcess.path("Twitter");
+  private static final BpmProcess testee = BpmProcess.path("X");
 
   @BeforeEach
   void beforeEach(AppFixture fixture) {
     //Disable OAuth feature for mock rest service
-    fixture.config("RestClients.Twitter API (Twitter API v2).Features", "ch.ivyteam.ivy.rest.client.mapper.JsonFeature");
-    fixture.var("Twitter-connector.Url", "{ivy.app.baseurl}/api/twitterMock");
+    fixture.config("RestClients.X API (X API v2).Features", "ch.ivyteam.ivy.rest.client.mapper.JsonFeature");
+    fixture.var("X-connector.Url", "{ivy.app.baseurl}/api/twitterMock");
   }
 
   @Test
