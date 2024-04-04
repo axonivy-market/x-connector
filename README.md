@@ -1,7 +1,7 @@
-# Twitter Connector
+# X Connector
 
-[![CI Build](https://github.com/axonivy-market/twitter-connector/actions/workflows/ci.yml/badge.svg)](https://github.com/axonivy-market/twitter-connector/actions/workflows/ci.yml)
+[![CI Build](https://github.com/axonivy-market/x-connector/actions/workflows/ci.yml/badge.svg)](https://github.com/axonivy-market/x-connector/actions/workflows/ci.yml)
 
-Using the Twitter API users in Axon Ivy can post and interact with messages from the Twitter network. 
+Using the X API users in Axon Ivy can post and interact with messages from the X network. 
 
-Read our [documentation](twitter-connector-product/README.md).
+Read our [documentation](x-connector-product/README.md).

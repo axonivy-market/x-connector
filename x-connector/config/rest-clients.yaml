@@ -1,0 +1,13 @@
+RestClients:
+  #X API v2 available endpoints
+  X API (X API v2):
+    UUID: 0b74edb8-5459-4ccc-aac7-505531e06398
+    Url: ${ivy.var.X-connector.Url}
+    Icon: res:/webContent/icons/x.png
+    Features:
+    - ch.ivyteam.ivy.rest.client.mapper.JsonFeature
+    - com.x.auth.OAuth2Feature
+    Properties:
+      API.key: ${ivy.var.X-connector.Key}
+      API.secretKey: ${ivy.var.X-connector.SecretKey}
+      AUTH.baseUri: https://api.twitter.com/oauth2
