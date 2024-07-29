@@ -8,8 +8,4 @@ on:
 
 jobs:
   build:
-    uses: axonivy-market/github-workflows/.github/workflows/dev.yml@v4
-    # temporary: use 11.3 until root cause of failing tests on 11.4 is known
-    ivyPluginVersion: 11.3.0
-    testerVersion: 11.3.0
-    ivyVersion: nightly-11.3
+    uses: axonivy-market/github-workflows/.github/workflows/dev.yml@v3
