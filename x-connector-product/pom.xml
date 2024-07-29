@@ -35,7 +35,7 @@
               <goal>run</goal>
             </goals>
             <configuration>
-              <tasks>
+              <target>
                 <unzip dest="${basedir}">
                   <fileset dir="${basedir}/..">
                     <include name="**/lib/generated/rest/jaxRsClient_*.jar" />
@@ -45,7 +45,7 @@
                   </patternset>
                   <mapper type="flatten" />
                 </unzip>
-              </tasks>
+              </target>
             </configuration>
           </execution>
         </executions>
