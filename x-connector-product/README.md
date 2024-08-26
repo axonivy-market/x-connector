@@ -1,7 +1,7 @@
 # X Connector
 Axon Ivy’s [X](https://twitter.com/)-connector illustrates the power of
 integrating existing systems to your process automation initiatives. Social
-communication is a must and using X (formarly Twitter) in any business process supports an
+communication is a must and using X in any business process supports an
 open communication strategy. This
 connector:
 
