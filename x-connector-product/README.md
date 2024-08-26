@@ -6,7 +6,7 @@ open communication strategy. This
 connector:
 
 - Gives you full power to the OpenAPI X services.
-- Supports you with a demo implementation to reduce 
+- Supports you with a demo implementation
 
 ## Demo
 
