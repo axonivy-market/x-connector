@@ -1,6 +1,6 @@
 # X Konnektor
 
-Der [X](https://twitter.com/)-Konnektor von Axon Ivy demonstriert die Integration bestehender Systeme in deine Prozessautomatisierung. Soziale Kommunikation ist ein Muss und die Verwendung von X in Geschäftsprozessen unterstützt eine offene Kommunikationsstrategie. 
+Der [X](https://twitter.com/)-Konnektor von Axon Ivy demonstriert die Integration der Services der Plattform "X" in deine Prozessautomatisierung. 
 
 Dieser Konnektor:
 
