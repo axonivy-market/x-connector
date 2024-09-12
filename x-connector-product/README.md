@@ -1,13 +1,12 @@
 # X Connector
-Axon Ivy’s [X (formarly Twitter)](https://twitter.com/) connector illustrates the power of
+Axon Ivy’s [X](https://twitter.com/)-connector illustrates the power of
 integrating existing systems to your process automation initiatives. Social
-communication is a must and using X (formarly Twitter) in any business process supports an
-open communication strategy. See what's happening in the world right now! This
+communication is a must and using X in any business process supports an
+open communication strategy. This
 connector:
 
-- Gives you full power to the OpenAPI X (formarly Twitter) services.
-- Supports you with an easy-to-copy demo implementation to reduce your
-  integration effort.
+- Gives you full power to the OpenAPI X services.
+- Supports you with a demo implementation
 
 ## Demo
 
