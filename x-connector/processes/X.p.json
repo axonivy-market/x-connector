@@ -1,5 +1,5 @@
 {
-  "format" : "10.0.0",
+  "$schema" : "https://json-schema.axonivy.com/process/12.0.0/process.json",
   "id" : "17D8046C692CA8F3",
   "kind" : "CALLABLE_SUB",
   "config" : {
@@ -10,7 +10,7 @@
       "type" : "CallSubStart",
       "name" : "findUser(String)",
       "config" : {
-        "callSignature" : "findUser",
+        "signature" : "findUser",
         "input" : {
           "params" : [
             { "name" : "username", "type" : "String", "desc" : "The user which you want to find in X" }
@@ -26,15 +26,19 @@
           "map" : {
             "result.user" : "in.user"
           }
-        },
-        "tags" : "CONNECTOR"
+        }
       },
+      "tags" : [
+        "CONNECTOR"
+      ],
       "visual" : {
         "at" : { "x" : 96, "y" : 64 },
         "labelOffset" : { "x" : 8, "y" : 43 },
         "icon" : "res:/webContent/icons/x.png?small"
       },
-      "connect" : { "id" : "f4", "to" : "f3" }
+      "connect" : [
+        { "id" : "f4", "to" : "f3" }
+      ]
     }, {
       "id" : "f1",
       "type" : "CallSubEnd",
@@ -46,73 +50,85 @@
       "type" : "RestClientCall",
       "name" : "X API (X API v2)",
       "config" : {
-        "path" : "/2/users/by/username/{username}",
-        "clientId" : "0b74edb8-5459-4ccc-aac7-505531e06398",
-        "clientErrorCode" : "ivy:error:rest:client",
-        "queryParams" : {
-          "expansions" : "",
-          "tweet.fields" : "",
-          "user.fields" : ""
+        "target" : {
+          "clientId" : "0b74edb8-5459-4ccc-aac7-505531e06398",
+          "path" : "/2/users/by/username/{username}",
+          "templateParams" : {
+            "username" : "in.username"
+          },
+          "queryParams" : {
+            "expansions" : "",
+            "tweet.fields" : "",
+            "user.fields" : ""
+          }
         },
-        "statusErrorCode" : "ivy:error:rest:client",
-        "responseMapping" : {
-          "out.user" : "result.data"
-        },
-        "templateParams" : {
-          "username" : "in.username"
-        },
-        "resultType" : "com.twitter.api.client.SingleUserLookupResponse"
+        "response" : {
+          "entity" : {
+            "type" : "com.twitter.api.client.SingleUserLookupResponse",
+            "map" : {
+              "out.user" : "result.data"
+            }
+          }
+        }
       },
       "visual" : {
         "at" : { "x" : 224, "y" : 64 },
-        "size" : { "width" : 176, "height" : 60 },
+        "size" : { "width" : 176 },
         "icon" : "res:/webContent/icons/x.png"
       },
-      "connect" : { "id" : "f2", "to" : "f1" }
+      "connect" : [
+        { "id" : "f2", "to" : "f1" }
+      ]
     }, {
       "id" : "f5",
       "type" : "RestClientCall",
       "name" : "X API (X API v2)",
       "config" : {
-        "path" : "/2/tweets/search/recent",
-        "clientId" : "0b74edb8-5459-4ccc-aac7-505531e06398",
-        "clientErrorCode" : "ivy:error:rest:client",
-        "queryParams" : {
-          "expansions" : "",
-          "tweet.fields" : "",
-          "user.fields" : "",
-          "query" : "in.query",
-          "start_time" : "",
-          "end_time" : "",
-          "since_id" : "",
-          "until_id" : "",
-          "max_results" : "",
-          "next_token" : "",
-          "media.fields" : "",
-          "place.fields" : "",
-          "poll.fields" : ""
+        "target" : {
+          "clientId" : "0b74edb8-5459-4ccc-aac7-505531e06398",
+          "path" : "/2/tweets/search/recent",
+          "templateParams" : {
+            "username" : ""
+          },
+          "queryParams" : {
+            "expansions" : "",
+            "tweet.fields" : "",
+            "user.fields" : "",
+            "query" : "in.query",
+            "start_time" : "",
+            "end_time" : "",
+            "since_id" : "",
+            "until_id" : "",
+            "max_results" : "",
+            "next_token" : "",
+            "media.fields" : "",
+            "place.fields" : "",
+            "poll.fields" : ""
+          }
         },
-        "statusErrorCode" : "ivy:error:rest:client",
-        "responseMapping" : {
-          "out.tweets" : "result.data"
-        },
-        "templateParams" : {
-          "username" : ""
-        },
-        "resultType" : "com.twitter.api.client.TweetSearchResponse"
+        "response" : {
+          "entity" : {
+            "type" : "com.twitter.api.client.TweetSearchResponse",
+            "map" : {
+              "out.tweets" : "result.data"
+            }
+          }
+        }
       },
       "visual" : {
         "at" : { "x" : 224, "y" : 192 },
-        "size" : { "width" : 176, "height" : 60 },
+        "size" : { "width" : 176 },
         "icon" : "res:/webContent/icons/x.png"
       },
-      "connect" : { "id" : "f8", "to" : "f7" }
+      "connect" : [
+        { "id" : "f8", "to" : "f7" }
+      ]
     }, {
       "id" : "f6",
       "type" : "CallSubStart",
       "name" : "findTweets(String)",
       "config" : {
-        "callSignature" : "findTweets",
+        "signature" : "findTweets",
         "input" : {
           "params" : [
             { "name" : "query", "type" : "String", "desc" : "The query to find tweets" }
@@ -128,15 +144,19 @@
           "map" : {
             "result.tweets" : "in.tweets"
           }
-        },
-        "tags" : "CONNECTOR"
+        }
       },
+      "tags" : [
+        "CONNECTOR"
+      ],
       "visual" : {
         "at" : { "x" : 96, "y" : 192 },
         "labelOffset" : { "x" : 16, "y" : 43 },
         "icon" : "res:/webContent/icons/x.png?small"
       },
-      "connect" : { "id" : "f9", "to" : "f5" }
+      "connect" : [
+        { "id" : "f9", "to" : "f5" }
+      ]
     }, {
       "id" : "f7",
       "type" : "CallSubEnd",

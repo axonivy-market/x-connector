@@ -1,5 +1,5 @@
 {
-  "format" : "10.0.0",
+  "$schema" : "https://json-schema.axonivy.com/process/12.0.0/process.json",
   "id" : "17D806AC43051BEB",
   "kind" : "HTML_DIALOG",
   "config" : {
@@ -10,10 +10,10 @@
       "type" : "HtmlDialogStart",
       "name" : "start(String)",
       "config" : {
-        "callSignature" : "start",
+        "signature" : "start",
         "input" : {
           "params" : [
-            { "name" : "query", "type" : "String" }
+            { "name" : "query", "type" : "String", "desc" : "" }
           ],
           "map" : {
             "out.query" : "param.query"
@@ -23,9 +23,11 @@
       },
       "visual" : {
         "at" : { "x" : 96, "y" : 64 },
-        "labelOffset" : { "x" : 13, "y" : 45 }
+        "labelOffset" : { "y" : 45 }
       },
-      "connect" : { "id" : "f7", "to" : "f6" }
+      "connect" : [
+        { "id" : "f7", "to" : "f6" }
+      ]
     }, {
       "id" : "f1",
       "type" : "HtmlDialogEnd",
@@ -43,7 +45,9 @@
         "at" : { "x" : 96, "y" : 256 },
         "labelOffset" : { "x" : 8, "y" : 35 }
       },
-      "connect" : { "id" : "f5", "to" : "f4" }
+      "connect" : [
+        { "id" : "f5", "to" : "f4" }
+      ]
     }, {
       "id" : "f4",
       "type" : "HtmlDialogExit",
@@ -56,18 +60,15 @@
       "name" : "find User",
       "config" : {
         "processCall" : "X:findUser(String)",
+        "call" : {
+          "map" : {
+            "param.username" : "in.query"
+          }
+        },
         "output" : {
           "map" : {
             "out" : "in",
             "out.user" : "result.user"
-          }
-        },
-        "call" : {
-          "params" : [
-            { "name" : "username", "type" : "String" }
-          ],
-          "map" : {
-            "param.username" : "in.query"
           }
         }
       },
@@ -90,9 +91,13 @@
           "visual" : {
             "at" : { "x" : 256, "y" : 96 }
           },
-          "connect" : { "id" : "f11", "to" : "f1", "via" : [ { "x" : 352, "y" : 96 } ] }
+          "connect" : [
+            { "id" : "f11", "to" : "f1", "via" : [ { "x" : 352, "y" : 96 } ] }
+          ]
         } ],
-      "connect" : { "id" : "f2", "to" : "f1" }
+      "connect" : [
+        { "id" : "f2", "to" : "f1" }
+      ]
     }, {
       "id" : "f8",
       "type" : "HtmlDialogEventStart",
@@ -102,8 +107,10 @@
       },
       "visual" : {
         "at" : { "x" : 96, "y" : 160 },
-        "labelOffset" : { "x" : 13, "y" : 35 }
+        "labelOffset" : { "y" : 35 }
       },
-      "connect" : { "id" : "f9", "to" : "f6", "via" : [ { "x" : 224, "y" : 160 } ] }
+      "connect" : [
+        { "id" : "f9", "to" : "f6", "via" : [ { "x" : 224, "y" : 160 } ] }
+      ]
     } ]
 }
