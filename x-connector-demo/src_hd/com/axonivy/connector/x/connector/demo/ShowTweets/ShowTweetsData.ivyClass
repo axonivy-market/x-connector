@@ -1,6 +1,0 @@
-ShowTweetsData #class
-com.axonivy.connector.x.connector.demo.ShowTweets #namespace
-query String #field
-query PERSISTENT #fieldModifier
-tweets java.util.List<com.twitter.api.client.Tweet> #field
-tweets PERSISTENT #fieldModifier
