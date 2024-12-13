@@ -1,12 +1,13 @@
+# yaml-language-server: $schema=https://json-schema.axonivy.com/app/12.0.0/variables.json
 Variables:
-
+  
   X-connector:
     
     # Url to x connector
     Url: "https://api.twitter.com"
-
+    
     # Key to connect to the X Account
-    Key: gb1w58iCDQuru5Eay06HRTtKw
-
+    Key: ""
+    
     # SecretKey to connect to the X Account
-    SecretKey: L5ZrxoPgGtGrP24XnetOGjE3By4koWxXEPHtk8qOojcOXzVQEK
+    SecretKey: ""

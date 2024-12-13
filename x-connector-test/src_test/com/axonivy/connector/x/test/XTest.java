@@ -17,7 +17,7 @@ import ch.ivyteam.ivy.bpm.engine.client.element.BpmProcess;
 import ch.ivyteam.ivy.bpm.exec.client.IvyProcessTest;
 import ch.ivyteam.ivy.environment.AppFixture;
 
-@IvyProcessTest
+@IvyProcessTest(enableWebServer = true)
 public class XTest {
 
   private static final BpmProcess testee = BpmProcess.path("X");
@@ -25,7 +25,7 @@ public class XTest {
   @BeforeEach
   void beforeEach(AppFixture fixture) {
     //Disable OAuth feature for mock rest service
-    fixture.config("RestClients.X API (X API v2).Features", "ch.ivyteam.ivy.rest.client.mapper.JsonFeature");
+    fixture.config("RestClients.X API (X API v2).Features", List.of("ch.ivyteam.ivy.rest.client.mapper.JsonFeature"));
     fixture.var("X-connector.Url", "{ivy.app.baseurl}/api/xMock");
   }
 
