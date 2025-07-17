@@ -8,13 +8,19 @@
 
   <fileSets>
     <fileSet>
-      <directory>.</directory>
-      <includes>
-        <include>product.json</include>
-        <include>openapi.json</include>
-        <include>README*.md</include>
-        <include>**/*.png</include>
-      </includes>
+        <directory>.</directory>
+        <includes>
+            <include>product.json</include>
+            <include>openapi.json</include>
+            <include>**/*.png</include>
+        </includes>
+    </fileSet>
+    <fileSet>
+        <directory>target</directory>
+        <outputDirectory>/</outputDirectory>
+        <includes>
+            <include>README*.md</include>
+        </includes>
     </fileSet>
   </fileSets>
 </assembly>
