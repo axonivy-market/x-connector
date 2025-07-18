@@ -3,7 +3,7 @@
   <groupId>com.axonivy.connector.x</groupId>
   <name>x-connector</name>
   <artifactId>x-connector-modules</artifactId>
-  <version>13.1.1-SNAPSHOT</version>
+  <version>13.1.1</version>
   <packaging>pom</packaging>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -18,7 +18,7 @@
 
   <scm>
     <developerConnection>scm:git:https://github.com/axonivy-market/${project.name}.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>v13.1.1</tag>
   </scm>
 
   <build>
