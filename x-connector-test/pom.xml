@@ -74,6 +74,14 @@
 						<key>${x.key}</key>
 						<secretKey>${x.secretKey}</secretKey>
 					</systemPropertyVariables>
+					<statelessTestsetReporter
+						implementation="org.apache.maven.plugin.surefire.extensions.junit5.JUnit5Xml30StatelessReporter">
+						<disable>false</disable>
+						<usePhrasedFileName>false</usePhrasedFileName>
+						<usePhrasedTestSuiteClassName>true</usePhrasedTestSuiteClassName>
+						<usePhrasedTestCaseClassName>true</usePhrasedTestCaseClassName>
+						<usePhrasedTestCaseMethodName>true</usePhrasedTestCaseMethodName>
+					</statelessTestsetReporter>
 				</configuration>
 			</plugin>
 		</plugins>
