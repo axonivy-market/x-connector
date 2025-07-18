@@ -9,3 +9,5 @@ on:
 jobs:
   build:
     uses: axonivy-market/github-workflows/.github/workflows/ci.yml@v6
+    secrets:
+      mvnArgs: -Dx.url=${{secrets.URL}} -Dx.key=${{secrets.KEY}} -Dx.secretKey=${{secrets.SECRET_KEY}}

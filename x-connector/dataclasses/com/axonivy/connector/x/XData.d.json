@@ -19,5 +19,9 @@
     "name" : "tweets",
     "type" : "java.util.List<com.twitter.api.client.Tweet>",
     "modifiers" : [ "PERSISTENT" ]
+  }, {
+    "name" : "error",
+    "type" : "ch.ivyteam.ivy.bpm.error.BpmError",
+    "modifiers" : [ "PERSISTENT" ]
   } ]
 }
