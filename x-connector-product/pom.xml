@@ -2,8 +2,11 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.axonivy.connector.x</groupId>
   <artifactId>x-connector-product</artifactId>
-  <version>12.0.2-SNAPSHOT</version>
+  <version>13.1.1-SNAPSHOT</version>
   <packaging>pom</packaging>
+  <properties>
+    <variables.yaml.file>../x-connector/config/variables.yaml</variables.yaml.file>
+  </properties>
   <build>
     <plugins>
       <plugin>
@@ -16,7 +19,7 @@
             <goals>
               <goal>single</goal>
             </goals>
-            <configuration>
+            <configuration>              
               <appendAssemblyId>false</appendAssemblyId>
               <descriptors>
                 <descriptor>zip.xml</descriptor>
@@ -26,27 +29,28 @@
         </executions>
       </plugin>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-antrun-plugin</artifactId>
+        <version>1.7</version>
         <executions>
           <execution>
-            <phase>prepare-package</phase>
+            <phase>generate-sources</phase>
+            <configuration>
+              <skip>${skip-readme}</skip>
+              <target>
+                <copy todir="${project.build.directory}">
+                  <fileset dir="../../" includes="doc/**" />
+                </copy>
+                <copy todir="${project.build.directory}">
+                  <fileset dir="." includes="README*.md" />
+                </copy>
+                <loadfile property="variables.yaml" srcFile="${variables.yaml.file}" encoding="UTF-8" failonerror="false" />
+                <replace file="${project.build.directory}/README.md" token="@variables.yaml@" value="${variables.yaml}" />
+                <replace file="${project.build.directory}/README_DE.md" token="@variables.yaml@" value="${variables.yaml}" />
+              </target>
+            </configuration>
             <goals>
               <goal>run</goal>
             </goals>
-            <configuration>
-              <target>
-                <unzip dest="${basedir}">
-                  <fileset dir="${basedir}/..">
-                    <include name="**/lib/generated/rest/jaxRsClient_*.jar" />
-                  </fileset>
-                  <patternset>
-                    <include name="**/openapi.json" />
-                  </patternset>
-                  <mapper type="flatten" />
-                </unzip>
-              </target>
-            </configuration>
           </execution>
         </executions>
       </plugin>
@@ -57,7 +61,7 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
           <version>3.0.0-M1</version>
-        </plugin>
+        </plugin>        
       </plugins>
     </pluginManagement>
   </build>

@@ -24,3 +24,14 @@ https://developer.twitter.com/en/docs/authentication/oauth-2-0/bearer-tokens
 ![create-app](images/twitterDev_createApp.png)
 3. Copy `API.key` and `API.secretKey` into your Rest Client Properties.
 ![save-keys](images/twitterDev_copyKeys.png)
+
+Add the following `Variables` to your `variables.yaml`:
+
+```
+@variables.yaml@
+```
+
+and replace the values with your given setup.
+
+> [!NOTE]
+> The variable path `X-connector` is renamed to `XConnector` from 13.

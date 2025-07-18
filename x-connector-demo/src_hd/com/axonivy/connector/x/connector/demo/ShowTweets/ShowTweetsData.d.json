@@ -5,11 +5,9 @@
   "isBusinessCaseData" : false,
   "fields" : [ {
     "name" : "query",
-    "type" : "String",
-    "modifiers" : [ "PERSISTENT" ]
+    "type" : "String"
   }, {
     "name" : "tweets",
-    "type" : "java.util.List<com.twitter.api.client.Tweet>",
-    "modifiers" : [ "PERSISTENT" ]
+    "type" : "java.util.List<com.twitter.api.client.Tweet>"
   } ]
 }

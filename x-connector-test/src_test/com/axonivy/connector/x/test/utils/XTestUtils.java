@@ -25,13 +25,13 @@ public class XTestUtils {
     String url = System.getProperty(XTestCommonConstants.URL);
     String key = System.getProperty(XTestCommonConstants.KEY);
     String SecretKey = System.getProperty(XTestCommonConstants.SECRET_KEY);
-    fixture.var("X-connector.Url", url);
-    fixture.var("X-connector.Key", key);
-    fixture.var("X-connector.SecretKey", SecretKey);
+    fixture.var("XConnector.Url", url);
+    fixture.var("XConnector.Key", key);
+    fixture.var("XConnector.SecretKey", SecretKey);
   }
 
   public static void setUpConfigForMockServer(AppFixture fixture) {
     fixture.config("RestClients.X API (X API v2).Features", List.of("ch.ivyteam.ivy.rest.client.mapper.JsonFeature"));
-    fixture.var("X-connector.Url", "{ivy.app.baseurl}/api/xMock");
+    fixture.var("XConnector.Url", "{ivy.app.baseurl}/api/xMock");
   }
 }
