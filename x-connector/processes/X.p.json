@@ -76,6 +76,24 @@
         "size" : { "width" : 176 },
         "icon" : "res:/webContent/icons/x.png"
       },
+      "boundaries" : [ {
+          "id" : "f49",
+          "type" : "ErrorBoundaryEvent",
+          "config" : {
+            "output" : {
+              "map" : {
+                "out" : "in",
+                "out.error" : "#error"
+              }
+            }
+          },
+          "visual" : {
+            "at" : { "x" : 280, "y" : 98 }
+          },
+          "connect" : [
+            { "id" : "f14", "to" : "f1", "via" : [ { "x" : 352, "y" : 96 } ] }
+          ]
+        } ],
       "connect" : [
         { "id" : "f2", "to" : "f1" }
       ]
@@ -120,6 +138,24 @@
         "size" : { "width" : 176 },
         "icon" : "res:/webContent/icons/x.png"
       },
+      "boundaries" : [ {
+          "id" : "f10",
+          "type" : "ErrorBoundaryEvent",
+          "config" : {
+            "output" : {
+              "map" : {
+                "out" : "in",
+                "out.error" : "#error"
+              }
+            }
+          },
+          "visual" : {
+            "at" : { "x" : 280, "y" : 224 }
+          },
+          "connect" : [
+            { "id" : "f11", "to" : "f7", "via" : [ { "x" : 352, "y" : 224 } ] }
+          ]
+        } ],
       "connect" : [
         { "id" : "f8", "to" : "f7" }
       ]
