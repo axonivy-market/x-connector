@@ -6,8 +6,10 @@ on:
     - cron:  '21 21 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: read
+  checks: write
+
 jobs:
   build:
     uses: axonivy-market/github-workflows/.github/workflows/dev.yml@v6
-    secrets:
-      mvnArgs: -Dx.url=${{secrets.URL}} -Dx.key=${{secrets.KEY}} -Dx.secretKey=${{secrets.SECRET_KEY}}
