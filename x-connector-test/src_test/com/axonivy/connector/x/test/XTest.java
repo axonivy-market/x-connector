@@ -1,7 +1,7 @@
 package com.axonivy.connector.x.test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-
+import static com.axonivy.utils.e2etest.enums.E2EEnvironment.REAL_SERVER;
 import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -11,8 +11,8 @@ import org.junit.jupiter.api.extension.ExtensionContext;
 
 import com.axonivy.connector.x.XData;
 import com.axonivy.connector.x.test.constants.XTestCommonConstants;
-import com.axonivy.connector.x.test.context.MultiEnvironmentContextProvider;
-import com.axonivy.connector.x.test.utils.XTestUtils;
+import com.axonivy.utils.e2etest.context.MultiEnvironmentContextProvider;
+import com.axonivy.utils.e2etest.utils.E2ETestUtils;
 import com.twitter.api.client.Tweet;
 import com.twitter.api.client.User;
 
@@ -30,19 +30,20 @@ public class XTest {
   private static final BpmProcess testee = BpmProcess.path("X");
   private static final BpmElement ERROR_FIND_USER = BpmElement.pid("17D8046C692CA8F3-f49");
   private static final BpmElement ERROR_FIND_TWEETS = BpmElement.pid("17D8046C692CA8F3-f10");
+  private boolean isRealTest;
 
   @BeforeEach
   void beforeEach(ExtensionContext context, AppFixture fixture) {
-    XTestUtils.setUpConfigForContext(context.getDisplayName(), fixture);
+    isRealTest = context.getDisplayName().equals(REAL_SERVER.getDisplayName());
+    E2ETestUtils.determineConfigForContext(context.getDisplayName(), runRealEnv(fixture), runMockEnv(fixture));
   }
 
   @TestTemplate
   void findUser(BpmClient bpmClient, ExtensionContext context) throws NoSuchFieldException {
-    boolean isRealCall = context.getDisplayName().equals(XTestCommonConstants.REAL_CALL_CONTEXT_DISPLAY_NAME);
     BpmElement startable = testee.elementName("findUser(String)");
     ExecutionResult result = bpmClient.start().subProcess(startable).execute("axonivy");
     var user = (User) result.data().last().get("user");
-    if (isRealCall) {
+    if (isRealTest) {
       XData xData = result.data().lastOnElement(ERROR_FIND_USER);
       if (xData != null && xData.getError() != null) {
         int errorCode = (int) xData.getError().getAttribute("RestClientResponseStatusCode");
@@ -56,21 +57,39 @@ public class XTest {
 
   @TestTemplate
   void findTweets(BpmClient bpmClient, ExtensionContext context) throws NoSuchFieldException {
-    boolean isRealCall = context.getDisplayName().equals(XTestCommonConstants.REAL_CALL_CONTEXT_DISPLAY_NAME);
     BpmElement startable = testee.elementName("findTweets(String)");
     ExecutionResult result = bpmClient.start().subProcess(startable).execute("axonivy");
     @SuppressWarnings("unchecked")
     var tweets = (List<Tweet>) result.data().last().get("tweets");
-    if (isRealCall) {
+    if (isRealTest) {
       XData xData = result.data().lastOnElement(ERROR_FIND_TWEETS);
       if (xData != null && xData.getError() != null) {
         int errorCode = (int) xData.getError().getAttribute("RestClientResponseStatusCode");
         assertThat(errorCode).isEqualTo(429);
+      } else {
+        assertThat(tweets).hasSizeGreaterThan(0);
       }
-      assertThat(tweets).hasSize(0);
       return;
     }
     assertThat(tweets).hasSize(1);
     assertThat(tweets.get(0).getText()).isEqualTo("this is a test tweet: axonivy.");
+  }
+
+  private Runnable runRealEnv(AppFixture fixture) {
+    return () -> {
+      String url = System.getProperty(XTestCommonConstants.URL);
+      String key = System.getProperty(XTestCommonConstants.KEY);
+      String SecretKey = System.getProperty(XTestCommonConstants.SECRET_KEY);
+      fixture.var("XConnector.Url", url);
+      fixture.var("XConnector.Key", key);
+      fixture.var("XConnector.SecretKey", SecretKey);
+    };
+  }
+
+  private Runnable runMockEnv(AppFixture fixture) {
+    return () -> {
+      fixture.config("RestClients.X API (X API v2).Features", List.of("ch.ivyteam.ivy.rest.client.mapper.JsonFeature"));
+      fixture.var("XConnector.Url", "{ivy.app.baseurl}/api/xMock");
+    };
   }
 }
