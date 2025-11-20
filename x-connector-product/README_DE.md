@@ -1,38 +1,39 @@
-# X Anschluss
-#Axon Efeus [X](https://twitter.com/)-Anschluss bebildert die Kraft von
-integrieren existieren Systeme zu eure Arbeitsgang Automatisierung Initiativen.
-Gesellschaftliche Kommunikation ist ein #Muss und benutzend X in irgendwelchem
-dienstlichen Arbeitsgang Unterstützungen eine offene Kommunikation
-Vorgehensweise. Dieser Anschluss:
+# X-Konnektor
+Der [X](https://twitter.com/)-Konnektor von Axon Ivy verdeutlicht die
+Leistungsfähigkeit der Integration bestehender Systeme in Ihre
+Prozessautomatisierungsinitiativen. Soziale Kommunikation ist ein Muss, und die
+Verwendung von X in jedem Geschäftsprozess unterstützt eine offene
+Kommunikationsstrategie. Dieser Konnektor:
 
-- Gibt du volle Kraft zu die OpenAPI X #bespringen.
-- Unterstützt du mit eine Demo Ausführung
+- Damit haben Sie vollen Zugriff auf die OpenAPI X-Dienste.
+- Unterstützt Sie mit einer Demo-Implementierung.
 
 ## Demo
 
-1. Vorstellungen zu lesen wie neue #Tweet mit einem Stichwort.
+1. Zeigt, wie man aktuelle Tweets mit einem Stichwort liest.
 
-![Gelesen-#Tweet](images/demo_readTweets.png)
-![Neu-#Tweet](images/demo_tweetQuery.png)
+![read-tweets](images/demo_readTweets.png)
+![recent-tweets](images/demo_tweetQuery.png)
 
 
 ## Einrichtung
 
-1. Bekomm ein X (formarly Zwitschern) Konto und signiert auch hin für ein
-   Entwickler Konto.
-   Https://Entwickler.Zwitscher.com/en/docs/Authentifizierung/oauth-2-0/Inhaber-Automatenmünzen
-2. Schaff einen Antrag mit eure Entwickler Konto.
-   ![Schaffen-#App](images/twitterDev_createApp.png)
-3. Kopie `API.Schlüssel` und `API.secretKey` Hinein euren Rest Kunden #Besitz.
-   ![Speichern-Schlüssel](images/twitterDev_copyKeys.png)
+1. Erstellen Sie einen X-Account (ehemals Twitter) und registrieren Sie sich
+   auch für einen Entwickler-Account.
+   https://developer.twitter.com/en/docs/authentication/oauth-2-0/bearer-tokens
+2. Erstellen Sie eine Anwendung mit Ihrem Entwicklerkonto.
+   ![create-app](images/twitterDev_createApp.png)
+3. Kopieren Sie `API.key` und `API.secretKey` in Ihre Rest Client-Eigenschaften.
+   ![save-keys](images/twitterDev_copyKeys.png)
 
-Füg zu die Gefolgschaft `Variablen` zu eure `Variablen.yaml`:
+Fügen Sie die folgenden Variablen „ `“` zu Ihren Variablen „ `“ variables.yaml`
+hinzu:
 
 ```
 @variables.yaml@
 ```
 
-Und austauschen die Werte mit eurer #gegeben Einrichtung.
+Ersetzen Sie die Werte durch Ihre angegebenen Einstellungen.
 
-> [!BEACHTE] Den variablen Pfad `X-Anschluss` ist #umbenennen zu `XConnector`
-> von 13.
+> [!HINWEIS] Der variable Pfad `X-Connector` wird ab Version 13 in `XConnector`
+> umbenannt.
