@@ -16,7 +16,7 @@ Kommunikationsstrategie. Dieser Konnektor:
 ![recent-tweets](images/demo_tweetQuery.png)
 
 
-## Einrichtung
+## Setup
 
 1. Erstellen Sie einen X-Account (ehemals Twitter) und registrieren Sie sich
    auch für einen Entwickler-Account.
