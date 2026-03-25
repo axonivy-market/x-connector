@@ -18,8 +18,7 @@ Kommunikationsstrategie. Dieser Konnektor:
 
 ## Setup
 
-1. Erstellen Sie einen X-Account (ehemals Twitter) und registrieren Sie sich
-   auch für einen Entwickler-Account.
+1. Get a X (formerly Twitter) account and sign up for a developer account too.
    https://developer.twitter.com/en/docs/authentication/oauth-2-0/bearer-tokens
 2. Erstellen Sie eine Anwendung mit Ihrem Entwicklerkonto.
    ![create-app](images/twitterDev_createApp.png)
