@@ -18,7 +18,7 @@ connector:
 
 ## Setup
 
-1. Get a X (formarly Twitter) account and sign up for a developer account too.
+1. Get a X (formerly Twitter) account and sign up for a developer account too.
 https://developer.twitter.com/en/docs/authentication/oauth-2-0/bearer-tokens
 2. Create an application with your developer account.
 ![create-app](images/twitterDev_createApp.png)
