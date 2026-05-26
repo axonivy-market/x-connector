@@ -1,5 +1,5 @@
 {
-  "$schema" : "https://json-schema.axonivy.com/process/13.2.0/process.json",
+  "$schema" : "https://json-schema.axonivy.com/14.0-dev/project/process.json",
   "id" : "17D8046C692CA8F3",
   "kind" : "CALLABLE_SUB",
   "config" : {
@@ -51,7 +51,7 @@
       "name" : "X API (X API v2)",
       "config" : {
         "target" : {
-          "clientId" : "0b74edb8-5459-4ccc-aac7-505531e06398",
+          "clientId" : "X-API-X-API-v2",
           "path" : "/2/users/by/username/{username}",
           "templateParams" : {
             "username" : "in.username"
@@ -103,7 +103,7 @@
       "name" : "X API (X API v2)",
       "config" : {
         "target" : {
-          "clientId" : "0b74edb8-5459-4ccc-aac7-505531e06398",
+          "clientId" : "X-API-X-API-v2",
           "path" : "/2/tweets/search/recent",
           "templateParams" : {
             "username" : ""

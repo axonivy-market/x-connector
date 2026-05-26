@@ -1,13 +1,18 @@
+# yaml-language-server: $schema=https://json-schema.axonivy.com/14.0-dev/config/rest-clients-1.json
 RestClients:
   #X API v2 available endpoints
-  X API (X API v2):
-    UUID: 0b74edb8-5459-4ccc-aac7-505531e06398
+  X-API-X-API-v2:
+    Name: X API (X API v2)
     Url: ${ivy.var.XConnector.Url}
     Icon: res:/webContent/icons/x.png
     Features:
-    - ch.ivyteam.ivy.rest.client.mapper.JsonFeature
-    - com.x.auth.OAuth2Feature
+      - ch.ivyteam.ivy.rest.client.mapper.JsonFeature
+      - com.x.auth.OAuth2Feature
     Properties:
       API.key: ${ivy.var.XConnector.Key}
       API.secretKey: ${ivy.var.XConnector.SecretKey}
       AUTH.baseUri: https://api.twitter.com/oauth2
+    OpenAPI:
+      SpecUrl: file:///home/lli/Downloads/oldDesigners/AxonIvyDesigner9.2.2.2108131032_Linux_x64/workspace/asdf/lib/generated/rest/openapi.json
+      Namespace: com.twitter.api.client
+    LegacyUUID: 0b74edb8-5459-4ccc-aac7-505531e06398
