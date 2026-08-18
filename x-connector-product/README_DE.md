@@ -1,8 +1,38 @@
-# X Konnektor
+# X-Konnektor
+Der [X](https://twitter.com/)-Konnektor von Axon Ivy verdeutlicht die
+Leistungsfähigkeit der Integration bestehender Systeme in Ihre
+Prozessautomatisierungsinitiativen. Soziale Kommunikation ist ein Muss, und die
+Verwendung von X in jedem Geschäftsprozess unterstützt eine offene
+Kommunikationsstrategie. Dieser Konnektor:
 
-Der [X](https://twitter.com/)-Konnektor von Axon Ivy demonstriert die Integration der Services der Plattform "X" in deine Prozessautomatisierung. 
+- Damit haben Sie vollen Zugriff auf die OpenAPI X-Dienste.
+- Unterstützt Sie mit einer Demo-Implementierung.
 
-Dieser Konnektor:
+## Demo
 
-- verschafft dir vollen Zugriff auf die OpenAPI X-Dienste.
-- unterstützt dich mit einer Demo-Implementierung
+1. Zeigt, wie man aktuelle Tweets mit einem Stichwort liest.
+
+![read-tweets](images/demo_readTweets.png)
+![recent-tweets](images/demo_tweetQuery.png)
+
+
+## Setup
+
+1. Get a X (formerly Twitter) account and sign up for a developer account too.
+   https://developer.twitter.com/en/docs/authentication/oauth-2-0/bearer-tokens
+2. Erstellen Sie eine Anwendung mit Ihrem Entwicklerkonto.
+   ![create-app](images/twitterDev_createApp.png)
+3. Kopieren Sie `API.key` und `API.secretKey` in Ihre Rest Client-Eigenschaften.
+   ![save-keys](images/twitterDev_copyKeys.png)
+
+Fügen Sie die folgenden Variablen „ `“` zu Ihren Variablen „ `“ variables.yaml`
+hinzu:
+
+```
+@variables.yaml@
+```
+
+Ersetzen Sie die Werte durch Ihre angegebenen Einstellungen.
+
+> [!HINWEIS] Der variable Pfad `X-Connector` wird ab Version 13 in `XConnector`
+> umbenannt.
