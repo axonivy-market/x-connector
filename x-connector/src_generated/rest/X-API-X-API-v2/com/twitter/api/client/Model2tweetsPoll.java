@@ -23,7 +23,7 @@ import java.util.List;
 /**
  * Poll options for a Tweet with a poll. This is mutually exclusive from Media and Quote Tweet Id.
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-12-03T13:24:26.911240+01:00[Europe/Zurich]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-12-03T13:24:26.911240+01:00[Europe/Zurich]")
 public class Model2tweetsPoll {
   @JsonProperty("options")
   private List<String> options = null;

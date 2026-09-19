@@ -1,9 +1,9 @@
 {
-  "$schema" : "https://json-schema.axonivy.com/14.0-dev/project/process.json",
-  "id" : "17D806AC43051BEB",
+  "$schema" : "https://json-schema.axonivy.com/14.0-dev/project/process-2.json",
+  "id" : "17D806DF94311493",
   "kind" : "HTML_DIALOG",
   "config" : {
-    "data" : "com.axonivy.connector.x.connector.demo.ShowUser.ShowUserData"
+    "data" : "com.axonivy.connector.x.connector.demo.ShowTweets.ShowTweetsData"
   },
   "elements" : [ {
       "id" : "f0",
@@ -19,11 +19,11 @@
             "out.query" : "param.query"
           }
         },
-        "guid" : "17D806AC4343B298"
+        "guid" : "17D806DF946B14F5"
       },
       "visual" : {
         "at" : { "x" : 96, "y" : 64 },
-        "labelOffset" : { "y" : 45 }
+        "labelOffset" : { "x" : 26, "y" : 35 }
       },
       "connect" : [
         { "id" : "f7", "to" : "f6" }
@@ -39,7 +39,7 @@
       "type" : "HtmlDialogEventStart",
       "name" : "close",
       "config" : {
-        "guid" : "17D806AC43E5AA29"
+        "guid" : "17D806DF949B21C4"
       },
       "visual" : {
         "at" : { "x" : 96, "y" : 256 },
@@ -52,49 +52,29 @@
       "id" : "f4",
       "type" : "HtmlDialogExit",
       "visual" : {
-        "at" : { "x" : 352, "y" : 256 }
+        "at" : { "x" : 224, "y" : 256 }
       }
     }, {
       "id" : "f6",
       "type" : "SubProcessCall",
-      "name" : "find User",
+      "name" : "find Tweets",
       "config" : {
-        "processCall" : "X:findUser(String)",
+        "processCall" : "X:findTweets(String)",
         "call" : {
           "map" : {
-            "param.username" : "in.query"
+            "param.query" : "in.query"
           }
         },
         "output" : {
           "map" : {
             "out" : "in",
-            "out.user" : "result.user"
+            "out.tweets" : "result.tweets"
           }
         }
       },
       "visual" : {
         "at" : { "x" : 224, "y" : 64 }
       },
-      "boundaries" : [ {
-          "id" : "f10",
-          "type" : "ErrorBoundaryEvent",
-          "config" : {
-            "output" : {
-              "code" : [
-                "import javax.faces.application.FacesMessage;",
-                "import javax.faces.context.FacesContext;",
-                "",
-                "FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, \"User not found\", \"\"));"
-              ]
-            }
-          },
-          "visual" : {
-            "at" : { "x" : 256, "y" : 96 }
-          },
-          "connect" : [
-            { "id" : "f11", "to" : "f1", "via" : [ { "x" : 352, "y" : 96 } ] }
-          ]
-        } ],
       "connect" : [
         { "id" : "f2", "to" : "f1" }
       ]
@@ -103,7 +83,7 @@
       "type" : "HtmlDialogEventStart",
       "name" : "update",
       "config" : {
-        "guid" : "17D8075B35A3EF4A"
+        "guid" : "17D806F562636800"
       },
       "visual" : {
         "at" : { "x" : 96, "y" : 160 },

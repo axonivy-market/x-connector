@@ -26,7 +26,7 @@ import java.util.List;
  * MultiListResponse
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-12-03T13:24:26.911240+01:00[Europe/Zurich]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-12-03T13:24:26.911240+01:00[Europe/Zurich]")
 public class MultiListResponse {
   @JsonProperty("data")
   private List<List> data = null;
