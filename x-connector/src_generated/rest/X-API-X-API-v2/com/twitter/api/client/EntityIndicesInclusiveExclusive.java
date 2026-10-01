@@ -21,7 +21,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 /**
  * Represent a boundary range (start and end index) for a recognized entity (for example a hashtag or a mention). &#x60;start&#x60; must be smaller than &#x60;end&#x60;.  The start index is inclusive, the end index is exclusive.
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-12-03T13:24:26.911240+01:00[Europe/Zurich]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-12-03T13:24:26.911240+01:00[Europe/Zurich]")
 public class EntityIndicesInclusiveExclusive {
   @JsonProperty("start")
   private Integer start = null;

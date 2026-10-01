@@ -22,7 +22,7 @@ import com.twitter.api.client.ProblemFields;
 /**
  * A generic problem with no additional information beyond that provided by the HTTP status code.
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-12-03T13:24:26.911240+01:00[Europe/Zurich]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-12-03T13:24:26.911240+01:00[Europe/Zurich]")
 public class GenericProblem extends ProblemFields implements OneOfProblem {
   /**
    * Gets or Sets type

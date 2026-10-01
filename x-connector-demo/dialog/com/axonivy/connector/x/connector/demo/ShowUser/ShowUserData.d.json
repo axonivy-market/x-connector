@@ -1,0 +1,13 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/14.0/project/data-class.json",
+  "simpleName" : "ShowUserData",
+  "namespace" : "com.axonivy.connector.x.connector.demo.ShowUser",
+  "fields" : [ {
+    "name" : "query",
+    "modifiers" : [ ]
+  }, {
+    "name" : "user",
+    "type" : "com.twitter.api.client.User",
+    "modifiers" : [ ]
+  } ]
+}
