@@ -22,7 +22,7 @@ import com.twitter.api.client.Position;
 /**
  * A [GeoJson Point](https://tools.ietf.org/html/rfc7946#section-3.1.2) geometry object.
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-12-03T13:24:26.911240+01:00[Europe/Zurich]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-12-03T13:24:26.911240+01:00[Europe/Zurich]")
 public class Point {
   /**
    * Gets or Sets type

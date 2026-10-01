@@ -1,0 +1,22 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/14.0/project/data-class.json",
+  "simpleName" : "XData",
+  "namespace" : "com.axonivy.connector.x",
+  "fields" : [ {
+    "name" : "username",
+    "modifiers" : [ ]
+  }, {
+    "name" : "user",
+    "type" : "com.twitter.api.client.User",
+    "modifiers" : [ ]
+  }, {
+    "name" : "query",
+    "modifiers" : [ ]
+  }, {
+    "name" : "tweets",
+    "type" : "java.util.List<com.twitter.api.client.Tweet>"
+  }, {
+    "name" : "error",
+    "type" : "ch.ivyteam.ivy.bpm.error.BpmError"
+  } ]
+}
